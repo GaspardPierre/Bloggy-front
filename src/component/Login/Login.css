@@ -1,0 +1,90 @@
+.login__container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../public/assets/connexion.webp);
+    background-size: cover;
+    height: 100vh;
+}
+
+.login__banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.login__button {
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    box-shadow: 0.2rem 0.2rem #7a5a5a;
+}
+
+.login__button-content {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.login__button-content--connect {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.login__button--welcome {
+    margin: 1rem 1rem 0 0;
+    background: #E14EB0;
+    border-color: #E14EB0;
+    width: 9rem;
+}
+
+.login__button:hover {
+    box-shadow: -0.2rem -0.2rem #7a5a5a;
+}
+
+.login__button--connexion {
+    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background: #CEDA51;
+    border-color: #CEDA51;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.login__button:hover {
+    box-shadow: -0.2rem -0.2rem #7a5a5a;
+}
+
+.login-form {
+display: flex;
+flex-direction: column;
+align-items: end;
+}
+
+.login-form__informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20rem 10rem 0px 0;
+}
+
+.login-form__title {
+    margin-bottom: 2.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.login-form__input {
+    padding: 0.8rem;
+    margin: 1rem;
+    width: 20rem;
+}
+
+.login-form__error-message {
+    font-size: 1rem;
+    margin-top: -19.5rem;
+}
+
+

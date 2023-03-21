@@ -1,0 +1,26 @@
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../public/assets/contact.webp);
+    background-size: cover;
+    height: 100vh;
+}
+
+.contact__bloc-informations {
+    display: flex;
+    justify-content: center;
+}
+
+.contact__informations {
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.4); /* transparence de 0.4 */
+    width: 21rem;
+    padding: 1rem;
+    margin-top: 8rem;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 black;
+}

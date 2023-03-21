@@ -1,0 +1,42 @@
+.modale-create-card__block {
+  display: flex;
+  justify-content: center;
+  margin: 20rem 51rem 0 0;
+}
+
+.modale-create-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modale-create-card__text {
+  font-size: 1rem;
+}
+
+.modale-create-card__input {
+  margin-bottom: 1rem;
+}
+  
+.modale-create-card__button {
+  margin: 0 0.5rem 0 0.5rem;
+  border-radius: 1rem;
+  border: hidden;
+  width: 30%;
+  padding: 0.2rem;
+  box-shadow: 0.1rem 0.1rem #7a5a5a;
+}
+
+.modale-create-card__button:hover {
+  box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.modale-create-card__error-message {
+  width: 20rem;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+}
+
+
+

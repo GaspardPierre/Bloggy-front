@@ -1,0 +1,43 @@
+.news__container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../public/assets/news.webp);
+    background-size: cover;
+    height: 100vh;
+}
+
+.news__card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #E4A929;
+}
+
+.news__button-container {
+    display: flex;
+    justify-content: center;
+    background-color: #E4A929;
+}
+
+.news__button {
+    padding: 0.5rem;
+    width:10rem;
+    margin: 1rem;
+    border: hidden;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+}
+
+.news__button:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.news__button--more {
+    background: #84D0E1;
+    border-color: #84D0E1;
+}
+
+.news__button--less {
+    background: #E899AE;
+    border-color: #E899AE;
+}

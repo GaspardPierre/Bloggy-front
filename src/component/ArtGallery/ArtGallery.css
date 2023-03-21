@@ -1,0 +1,43 @@
+.art-gallery__container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../public/assets/art-gallery.webp);
+    background-size: cover;
+    height: 100vh;
+}
+
+.art-gallery__card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #f77214;
+}
+
+.art-gallery__button-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f77214;
+}
+
+.art-gallery__button {
+    padding: 0.5rem;
+    width:10rem;
+    margin: 1rem;
+    border: hidden;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+}
+
+.art-gallery__button:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.art-gallery__button--more {
+    background: #84D0E1;
+    border-color: #84D0E1;
+}
+
+.art-gallery__button--less {
+    background: #E899AE;
+    border-color: #E899AE;
+}

@@ -1,0 +1,123 @@
+.organization__container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../public/assets/organization.webp);
+    background-size: cover;
+    height: 100vh;
+}
+
+.organization__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.organization__button-return {
+    padding: 0.3rem;
+    margin: 1rem 0 2rem 1rem;
+    width: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+    border: hidden;
+    background-color: #E14EB0;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    vertical-align: text-bottom;
+}
+
+.organization__button-return:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.organization__search {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 1rem;
+    width: 35rem;
+    border-radius: 1rem;
+    background-color: rgba(255,255,255,0.5);
+    padding: 0 0.5rem 1rem 0.5rem;
+}
+
+.organization__search-city {
+
+}
+
+.organization__input-city {
+    margin-right: 0.5rem;
+    width: 20rem;
+}
+
+.organization__button-search {
+    padding: 0 0.5rem 0 0.5rem;
+    height: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+    border: hidden;
+    font-size: 0.8rem;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+.organization__button-search:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.organization__button-search--city {
+    background-color: #84D0E1;
+}
+
+.organization__button-cities {
+    display: flex;
+    align-items: end;
+}
+
+.organization__button-search--cities {
+    margin: 0 0 0.1rem 1rem;
+    background-color: #CEDA51;
+}
+
+.organization__title {
+    margin: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.organization__card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #F2C139;
+}
+
+.organization__button-container {
+    display: flex;
+    justify-content: center;
+    background-color: #F2C139;
+}
+
+.organization__button {
+    padding: 0.5rem;
+    width:10rem;
+    margin: 1rem;
+    border: hidden;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+}
+
+.organization__button:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.organization__button--more {
+    background: #84D0E1;
+    border-color: #84D0E1;
+}
+
+.organization__button--less {
+    background: #E899AE;
+    border-color: #E899AE;
+}

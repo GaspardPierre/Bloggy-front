@@ -1,0 +1,67 @@
+.dico__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.5); /* transparence de 0.4 */
+    border-radius: 1rem;
+    margin: 0rem 1rem 0 1rem; 
+}
+
+.dico__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dico__title {
+    margin: 1rem;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.dico__word {
+    margin-right: 1rem;
+    padding: 0.2rem;
+    background-color: rgba(255,255,255,0.5);
+    width: 20rem;
+    height: 1rem;
+    font-size: 0.8rem;
+    text-align: start;
+    vertical-align: middle;
+    border: hidden; /* enlever la bordure du bas */
+}
+
+.dico__word:focus {
+    outline: none; /* enlever la bordure quand on est dans le champ */
+}
+
+.dico__button {
+    margin: 0.1em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background: #84D0E1;
+    border-color: #84D0E1;
+    font-size: 0.8rem;
+    text-align: center;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+    border: hidden;
+}
+
+.dico__button:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.dico__result {
+    padding-left: 1rem;
+}
+
+.dico__definition {
+    margin: 0 1rem 0 1rem;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+}

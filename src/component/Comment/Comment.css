@@ -1,0 +1,123 @@
+.comment__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.comment__container--scroll{
+    max-height: 70px;
+    overflow-y: scroll;
+}
+
+.comment__add {
+    align-items: center;
+}
+
+.comment__add-button {
+    width: 1rem;
+    padding: 0;
+}
+.comment__add-button:hover {
+   cursor:pointer
+}
+
+
+.comment__add-content {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.comment__form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.7rem 0 0.7rem 0;
+}
+
+.comment__input {
+    display: flex;
+    flex-direction: row;
+    margin-right: 0.3rem;
+    padding: 0.2rem;
+    align-items: end;
+    width: 100%;
+    height: 1rem;
+    font-size: 0.8rem;
+    border: hidden;
+}
+
+.comment__button {
+    margin: 0.1em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+    border: hidden;
+}
+
+.comment__button:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.comment__button--confirm {
+    background: #CEDA51;
+    border-color: #CEDA51;
+}
+
+.comment__button--cancel {
+    background: #E899AE;
+    border-color: #E899AE;
+}
+
+.comment__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 1.2rem;
+    text-align: start;
+    vertical-align: middle;
+    margin-top: 1rem;
+}
+
+.comment__content {
+    margin-right: 0.2rem;
+    padding: 0.2rem;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 1rem;
+    font-size: 0.8rem;
+    text-align: start;
+    vertical-align: middle;
+}
+
+.comment__list-button {
+    margin: 0.1em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+    border: hidden;
+}
+
+.comment__list-button:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.comment__list-button--modify {
+    width: 3.8rem;
+    background: #84D0E1;
+    border-color: #84D0E1;
+}
+
+.comment__list-button--delete {
+    width: 4.5rem;
+    background: #E14EB0;
+    border-color: #E14EB0;
+}

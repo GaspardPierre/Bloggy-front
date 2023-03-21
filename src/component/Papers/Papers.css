@@ -1,0 +1,147 @@
+.papers__container {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.5); /* transparence de 0.4 */
+    border-radius: 1rem;
+    margin: 2rem 1rem 3rem 1rem;
+}
+
+.papers__edit-form {
+    width: 35rem;
+    padding-left: 1rem;
+}
+
+.papers__title {
+    margin: 1rem 0 1rem 0;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.papers__add {
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.papers__add-button {
+    width: 1rem;
+    padding: 0;
+}
+
+.papers__add-content {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.papers__form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0.7rem 0 0.7rem 0;
+}
+
+.papers__input-field {
+    display: flex;
+    flex-direction: row;
+    margin-right: 0.3rem;
+    padding: 0.2rem;
+    align-items: end;
+    width: 12rem;
+    height: 1rem;
+    font-size: 0.8rem;
+    border: hidden;
+}
+
+.papers__input-paper {
+    margin-bottom: 0.5rem;
+}
+
+.papers__input-upload {
+    margin-bottom: 0.5rem;
+}
+
+.papers__container-image {
+    height: 100%;
+}
+
+.papers__input-image {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: 100%;
+}
+
+.papers__upload-image {
+
+}
+
+.papers__image {
+    width: 100%;
+}
+
+.papers__button {
+    margin: 0.1em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1rem;
+    width: 4rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    box-shadow: 0.1rem 0.1rem #7a5a5a;
+    border: hidden;
+}
+
+.papers__button:hover {
+    box-shadow: -0.1rem -0.1rem #7a5a5a;
+}
+
+.papers__button--confirm {
+    background: #CEDA51;
+    border-color: #CEDA51;
+}
+
+.papers__button--cancel {
+    background: #E899AE;
+    border-color: #E899AE;
+}
+
+.papers__button--delete {
+    width: 4.5rem;
+    background: #E14EB0;
+    border-color: #E14EB0;
+}
+
+.papers__container-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.papers__list {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: calc(15% - 1rem); /* 15% donc environ 6 par ligne avec 1rem d'espacement */
+    width: 7%;
+    text-align: start;
+    vertical-align: middle;
+    margin: 1rem;
+}
+
+.papers__content {
+    margin-right: 0.2rem;
+    padding: 0.2rem;
+    background-color: rgba(255,255,255,0.5);
+    width: 8rem;
+    height: 4rem;
+    font-size: 0.8rem;
+    text-align: start;
+    vertical-align: middle;
+}
+
