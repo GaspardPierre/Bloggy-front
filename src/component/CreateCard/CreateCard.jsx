@@ -44,6 +44,7 @@ export default function  CreateCard() {
       const response = await axios.post("http://localhost:5000/api/card/addCard", formData,  { withCredentials: true });
     
       const newCard = response.data;
+      alert("Carte ajoutée!");
 
      dispatch(addCard(newCard));
       

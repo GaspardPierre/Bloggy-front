@@ -12,50 +12,16 @@ import "./Videos.css";
 
 export default function Video() {
 
-
+  const cards = useSelector((state) => state.cards.cards);
   const [cardNumbers, setCardNumbers] = useState(3);
   const [showMore, setShowMore] = useState(true);
   const [isShowModale, setIsShowModale] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [cards, setCards] = useState([]);
   const filteredCards = useCardFilter(cards,"video")
   const modalToggle = () => {
     setIsShowModale(!isShowModale);
   };
- /*  Fonction pour supprimer les cartes */
 
-
-
-
-  useEffect(() => {
-
-    const fetchData = async () => {
-
-      setLoading(true);
-
-      try {
-        const response = await api.get("/card");
-        console.log(response.data)
-        setCards(response.data);
-        setLoading(false);
-
-      } catch (err) {
-        console.log(err);
-        setLoading(false);
-      }
-
-    };
-
-    fetchData();
-
-  }, []);
-
-
-
-  // ouverture de la modale d'ajout de Card au clique
-  const handleAddCard = () => {
-    setIsShowModale(true);
-  };
 
   /* fonction qui ajoute 3 Card au clique */
   const handleShowMore = () => {
@@ -69,16 +35,6 @@ export default function Video() {
     setShowMore(true)
   };
 
-/*   Supprimer les cartes */
-
-  const onDelete = (id) => {
-    try {
-      // Supprime la carte ayant l'id spécifié de la liste de cartes
-      setCards(cards.filter((card) => card.id !== id));
-    } catch (error) {
-      console.log("l'erreur est :", error);
-    }
-  };
   
   const isUser =useSelector((state) => state.user.role);
 
@@ -118,6 +74,7 @@ export default function Video() {
                 url={item.url}
                 type={item.type}
                 author={item.author}
+                memberId={item.member_id}
               />
             ))}
 

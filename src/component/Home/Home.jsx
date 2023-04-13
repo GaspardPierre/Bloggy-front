@@ -22,15 +22,16 @@ export default function Home() {
  
   
 /* On vérifie si un utilisateur est connecté en consultant les données stockées via le sessionStorage, si on trouve un token et un email, on envoie une action de connexion via "dispatch(actionlogin..." */
-useEffect(() => {
+// useEffect(() => {
   const email = sessionStorage.getItem("email");
   const role = sessionStorage.getItem("role");
-  console.log(role)
+  const pseudo = sessionStorage.getItem("pseudo");
+  console.log(email, role, pseudo)
 
-  if (email && role) {
-    dispatch(actionlogin(email, role));
-  }
-}, [dispatch]);
+//   if (email && role) {
+//     dispatch(actionlogin(email, role, pseudo));
+//   }
+// }, [dispatch]);
 
 
   // action au clique sur le bouton "Espace Pro"

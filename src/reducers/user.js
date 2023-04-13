@@ -3,8 +3,9 @@ import { LOGIN, LOGOUT, REGISTER } from '../actions/user';
 const initialState = {
     isLoggedIn: false,
     email: '',
-    token: '',
+    pseudo: '',
     role: '',
+    userId: ''
    
 }
 
@@ -15,8 +16,10 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 isLoggedIn: true,
                 email: action.payload.email,
-          /*        token: action.payload.token, */
+                pseudo: action.payload.pseudo,
            role:action.payload.role,  
+           userId:action.payload.userId 
+         
               
               
             }
@@ -25,8 +28,9 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 isLoggedIn: false,
                 email: '',
-                token: '',
+                pseudo: '',
                 role:'',
+                userId:''
               
           
             }
@@ -35,7 +39,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 isLoggedIn: true,
                 email: action.payload.email,
-                token: action.payload.token,
+                pseudo: action.payload.pseudo,
           
               
             }

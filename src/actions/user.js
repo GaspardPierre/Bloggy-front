@@ -4,7 +4,7 @@ export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const REGISTER = "REGISTER";
 
-export const actionlogin = (email,role) => {
+export const actionlogin = (email,role,pseudo,userId) => {
  
     return dispatch => {
       dispatch({
@@ -12,14 +12,18 @@ export const actionlogin = (email,role) => {
         payload: {
           email,
           role,
+          pseudo,
+          userId
          /*  pseudo, */
          
         
       
         }
       });
-      sessionStorage.setItem("email", email);
-      sessionStorage.setItem("role",role); console.log(role)
+      sessionStorage.setItem("email", email);console.log(email)
+      sessionStorage.setItem("role",role); 
+      sessionStorage.setItem("pseudo",pseudo);console.log(pseudo);
+      sessionStorage.setItem("id",userId);console.log(userId);
      
     }
 };

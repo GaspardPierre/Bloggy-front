@@ -4,12 +4,14 @@ import Card from "../Card/Card";
 import ModaleCreateCard from "../Modale/ModaleCreateCard";
 import { useSelector } from "react-redux";
 import useCardFilter from "../../customHook/useCardFilter";
-
-import "./ArtGallery.css";
 import CreateCard from "../CreateCard/CreateCard";
+import "./ArtGallery.css";
+
 
 export default function ArtGallery() {
   const cards = useSelector((state) => state.cards.cards);
+
+
   const [cardNumbers, setCardNumbers] = useState(3);
   const [showMore, setShowMore] = useState(true);
   const [isShowModale, setIsShowModale] = useState(false);
@@ -34,7 +36,7 @@ export default function ArtGallery() {
 
   return (
     <React.Fragment>
-      <div className="art-gallery__container">
+      <div className="art-gallery__container" >
         <Header />
         {/* 
           Si User est un "visiteur" on n'ajoute pas "Ajouter un média" */}
@@ -74,13 +76,14 @@ export default function ArtGallery() {
               type={item.type}
               author={item.author}
               memberId={item.member_id}
+             
             />
           ))}
         </div>
 
         <div className="art-gallery__button-container">
           {/* Si on a plus de 3 Card à afficher, on affiche le bouton "Afficher plus" */}
-          {cardNumbers < cards.length && (
+          {cardNumbers < filteredCards.length && (
             <button
               className="art-gallery__button art-gallery__button--more"
               onClick={handleShowMore}
@@ -89,8 +92,8 @@ export default function ArtGallery() {
             </button>
           )}
 
-          {/* Si on a au moins 6 cartes à afficher, on affiche le bouton "Afficher moins" */}
-          {cardNumbers >= 6 && (
+          {/* Si le nombre de Carte filtrés par page est supérieur à 4, on affiche, le bouton "afficher moins" */}
+          {cardNumbers>= 4 &&  filteredCards.lenght >=4 &&(
             <button
               className="art-gallery__button art-gallery__button--less"
               onClick={handleShowLess}

@@ -1,0 +1,29 @@
+.error404_container{
+    background-image: url(../../../public/assets/error404.png);
+    height:100vh;
+
+}
+.error404_h1{
+    margin: 1rem;
+    text-align: center;
+}
+.home__button {
+    width: 9rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin: 1rem 1rem 0 0;
+    border: hidden;
+    background: #84D0E1;
+    border-color: #84D0E1;
+    box-shadow: 0.2rem 0.2rem #7a5a5a;
+    font-weight: bold;
+}
+
+.home__button:hover {
+    box-shadow: -0.2rem -0.2rem #7a5a5a;
+}
+
+.home__button-content {
+    font-size: 1.3rem;
+    color: white;
+}

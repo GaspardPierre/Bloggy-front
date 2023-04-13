@@ -30,10 +30,11 @@ const handleSubmit = async (event) => {
   try {
     const response = await api.post('/login', { pseudo, email, password });
     console.log(response);
-    const role = response.data.member.role/* .role; */
+    const role = response.data.member.role;
+    const userId = response.data.member.id;/* .role; */
     console.log(role);
 
-    dispatch(actionlogin(email, role));
+    dispatch(actionlogin(email, role,pseudo, userId));
     navigate("/");
     
    

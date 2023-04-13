@@ -8,7 +8,7 @@ import { deleteCard } from "../../actions/card";
 import "./Card.css";
 
 
-const Card = function Card({
+export default function Card({
   id,
   author,
   description,
@@ -19,6 +19,8 @@ const Card = function Card({
 }) {
   const dispatch = useDispatch() ;
   const cards = useSelector ((state) => state.cards);
+  const comments = useSelector ((state) => state.comments);
+
   const isUser = useSelector((state) => state.user.role);
   const [showFileInput, setShowFileInput] = useState(false);
   /*  Le bouton "afficher" de EditionImage doit être caché par défault */
@@ -34,7 +36,7 @@ const Card = function Card({
   const [typeMedia, setTypeMedia] = useState(type);
   const [urlMedia, setUrlMedia] = useState(url);
 
-  const cardId = id;
+
   const membId = memberId;
 
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -191,7 +193,9 @@ const Card = function Card({
             )}
           </form>
 
-          <Comment key={id} author={author}></Comment>
+          <Comment key={id} 
+           author={author}
+           card_id={id}></Comment>
         </div>
       </div>
     </>
@@ -208,4 +212,3 @@ Card.propTypes = {
   url: PropTypes.string.isRequired,
 };
 
-export default Card;

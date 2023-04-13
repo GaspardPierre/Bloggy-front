@@ -29,7 +29,8 @@ const cardsReducer = (state = initialState, action) => {
         return {
             ...state,
             // On filtre les cards qui n'ont pas l'id de la card supprimée
-            cards :[...state.cards.filter(card => card.id !== action.id)]
+            cards :[...state.cards.filter(card => card.id !== action.id), ]
+           
         }
 
     default:

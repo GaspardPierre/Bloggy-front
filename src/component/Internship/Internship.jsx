@@ -6,47 +6,26 @@ import api from "../../api";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import useCardFilter from "../../customHook/useCardFilter";
-
-import "./Internship.css";
 import CreateCard from "../CreateCard/CreateCard";
+import "./Internship.css";
+
 
 
 
 export default function Internship() {
+  const cards = useSelector((state) => state.cards.cards);
   const [cardNumbers, setCardNumbers] = useState(3);
   const [showMore, setShowMore] = useState(true);
   const [isShowModale, setIsShowModale] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [cards, setCards] = useState([]);
   const filteredCards = useCardFilter(cards,"internship")
   const closeModale = () => {
     setIsShowModale(false);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-
-      try {
-        const response = await api.get("/card");
-        console.log(response.data);
-        setCards(response.data);
-        setLoading(false);
-      } catch (err) {
-        console.log(err);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
- 
-
-  const handleAddCard = () => {
-    setIsShowModale(true);
+  const modalToggle = () => {
+    setIsShowModale(!isShowModale);
   };
-
   const handleShowMore = () => {
     setCardNumbers(cardNumbers + 3);
     setShowMore(false);
@@ -54,15 +33,7 @@ export default function Internship() {
 
   const handleShowLess = () => {
     setCardNumbers(cardNumbers - 3);
-    setShowMore(true);
-  };
-
-  const onDelete = (id) => {
-    try {
-      setCards(cards.filter((card) => card.id !== id));
-    } catch (error) {
-      console.log("l'erreur est :", error);
-    }
+    setShowMore(false);
   };
 
   const isUser = useSelector((state) => state.user.role);
@@ -118,7 +89,7 @@ export default function Internship() {
           {isUser === "visiteur" ? null : (
             <div className='art-gallery__add-card'>
                 {/* l'utilisateur clique sur le bouton 'Ajouter un journal' */}
-                <button className='art-gallery__add-card-button' onClick={handleAddCard}>+</button>
+                <button className='art-gallery__add-card-button' onClick={modalToggle}>+</button>
                 <span className='art-gallery__add-card-content'>Ajouter un média</span>
             </div>
             )}
@@ -148,7 +119,6 @@ export default function Internship() {
                   type={item.type}
                   author={item.author}
                   memberId={item.member_id}
-                  onDelete={onDelete}
                   className="card__internship"
                  
                 />
