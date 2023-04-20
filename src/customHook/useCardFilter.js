@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useSelector} from "react-redux";
 
-// custom Hook  pour trier les cartes selon le type
-let cards;
+
+
 
 function useCardFilter(cards, type) {
   cards = useSelector((state) => state.cards.cards); 

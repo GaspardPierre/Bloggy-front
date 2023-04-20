@@ -7,7 +7,7 @@ export const DELETE_CARD = 'DELETE_CARD';
 
 
 export const fetchCards = () => {
-// L'ACTION fetch cards  appelle  l'api et renvoie soit succes avec toutes les cartes en payload soit une erreur 
+
 
     return async (dispatch) => {
         try {

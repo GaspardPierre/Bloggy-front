@@ -7,13 +7,15 @@ import { addCard } from "../../actions/card";
 import './CreateCard.css';
 
 
+//je souhaite récupérer l'id de l'utilisateur connecté pour l'envoyer dans le formulaire de création de carte
+//j'ai essayé de le faire avec le useSelector mais je n'arrive pas à le récupérer
 
 
-export default function  CreateCard() {
+export default function  CreateCard({onFormSubmit}) {
 
   const dispatch = useDispatch();
   const cards = useSelector((state) => state.cards);
-  console.log(cards, "Les cards du STORE!!!!!")
+ 
 
   
 
@@ -22,7 +24,9 @@ export default function  CreateCard() {
   const [description, setDescription] = useState("");
   const [uploaded_file, setUploaded_file] = useState(null);
   const [type, setType] = useState("");
-  const [member_id, setMemberId] = useState(0);
+  const member_id = sessionStorage.getItem("id");
+  console.log(  member_id);
+  
   
   const [url, setUrl] = useState("");
 
@@ -47,6 +51,7 @@ export default function  CreateCard() {
       alert("Carte ajoutée!");
 
      dispatch(addCard(newCard));
+     onFormSubmit();
       
     
     } catch (error) {
@@ -122,15 +127,7 @@ export default function  CreateCard() {
   />
 </label>
       <br />
-      <label>
-        Member ID:
-        <input
-          type="number"
-          value={member_id}
-          onChange={(event) => setMemberId(event.target.value)}
-          name="member_id"
-        />
-      </label>
+    
       <button type="submit"
      >Envoyer</button>
     </form>

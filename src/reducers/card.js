@@ -4,13 +4,13 @@ import { ADD_CARD } from "../actions/card";
 
 
 
-//le state de départ//
+
 export const initialState = {
   cards: [],
   loading: false,
   error: null,
 };
- //le cardreducer prens en parametre le state initial et une action , il retourne un nouveau state//
+ 
 const cardsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CARDS_SUCCESS:

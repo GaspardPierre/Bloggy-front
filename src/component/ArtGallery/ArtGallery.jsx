@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import Card from "../Card/Card";
@@ -6,8 +7,6 @@ import { useSelector } from "react-redux";
 import useCardFilter from "../../customHook/useCardFilter";
 import CreateCard from "../CreateCard/CreateCard";
 import "./ArtGallery.css";
-
-
 export default function ArtGallery() {
   const cards = useSelector((state) => state.cards.cards);
 
@@ -60,7 +59,8 @@ export default function ArtGallery() {
           {isShowModale && (
             <ModaleCreateCard>
               <CreateCard
-              // onAddCard={handleAddCard}//
+              onFormSubmit={modalToggle}
+           
               />
             </ModaleCreateCard>
           )}
