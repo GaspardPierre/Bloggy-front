@@ -11,6 +11,15 @@
     flex-direction: row;
     justify-content: end;
 }
+@media (max-width: 768px) {
+    .login__banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1 auto;
+    }
+  }
+
 
 .login__button {
     font-weight: bold;
@@ -68,8 +77,20 @@ align-items: end;
     align-items: center;
     margin: 20rem 10rem 0px 0;
 }
+@media (max-width: 768px) {
+    .login-form__informations {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      margin: 0 auto ;
+    }
+  }
+
+
 
 .login-form__title {
+    margin-top: 1rem;
     margin-bottom: 2.5rem;
     color: white;
     font-weight: bold;
@@ -79,7 +100,7 @@ align-items: end;
 .login-form__input {
     padding: 0.8rem;
     margin: 1rem;
-    width: 20rem;
+    width: 17rem;
 }
 
 .login-form__error-message {
