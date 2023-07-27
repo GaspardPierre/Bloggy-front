@@ -11,7 +11,14 @@
     flex-direction: row;
     justify-content: end;
 }
-
+@media (max-width: 768px) {
+    .regist__banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1 auto;
+    }
+  }
 .regist__logo {
     width: 38rem;
     margin: 1rem 14rem 0 0;
@@ -71,8 +78,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 11rem 10rem 0 0;
+    margin: 11rem 0 0 0;
 }
+
+@media (max-width: 768px) {
+    .login-form__informations {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      margin: 0 auto ;
+    }
+  }
 
 .regist-form__title {
     margin-bottom: 2.5rem;
@@ -84,7 +101,7 @@
 .regist-form__input {
     padding: 0.8rem;
     margin: 1rem;
-    width: 20rem;
+    width: 16rem;
 }
 
 .regist__error-message{
