@@ -5,6 +5,11 @@
     background-size: cover;
     height: 100vh;
 }
+@media (max-width: 1024px) {
+    .login__container {
+        background-image: url(../../../public/assets/login_mobile_tablet.jpg);
+    }
+  }
 
 .login__banner {
     display: flex;
@@ -97,6 +102,11 @@ align-items: end;
     font-size: 1.8rem;
 }
 
+@media (max-width: 768px) {
+    .login-form__title {
+      margin-top: 1rem;
+    }
+  }
 .login-form__input {
     padding: 0.8rem;
     margin: 1rem;

@@ -5,6 +5,11 @@
     background-size: cover;
     height: 100vh;
 }
+@media (max-width: 1024px) {
+    .regist__container {
+        background-image: url(../../../public/assets/login_mobile_tablet.jpg);
+    }
+  }
 
 .regist__banner {
     display: flex;
@@ -82,7 +87,7 @@
 }
 
 @media (max-width: 768px) {
-    .login-form__informations {
+    .regist-form__informations {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,6 +102,11 @@
     font-weight: bold;
     font-size: 1.8rem;
 }
+@media (max-width: 768px) {
+    .regist-form__title {
+      margin-top: 1rem;
+    }
+  }
 
 .regist-form__input {
     padding: 0.8rem;
